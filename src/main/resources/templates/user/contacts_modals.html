@@ -1,0 +1,67 @@
+<div data-th-fragment="contact">
+    <!-- Main modal -->
+    <div id="view_contact_modal" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Contact Details
+                    </h3>
+                    <button type="button" onclick="closeContactModal()"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="default-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <div class="mb-5 flex justify-around py-2">
+                        <img class="rounded-full border w-36 h-36" id="contact_image" alt="Extra large avatar">
+                        <div>
+                            <h2 class="text-4xl text-center font-bold" id="contact_name">Contact Name</h2>
+                            <p class="text-center p-2 font-medium text-xl" id="contact_email">information@email.com</p>
+                            <p class="text-center p-2 font-medium text-xl" id="contact_phone">9876543210</p>
+                        </div>
+                    </div>
+
+                    <dl class="max-w-full text-center text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+                        <div class="flex flex-col pb-3">
+                            <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Home address</dt>
+                            <dd id="contact_address" class="text-lg font-semibold"></dd>
+                        </div>
+                        <div class="flex flex-col py-3">
+                            <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Description</dt>
+                            <dd id="contact_description" class="text-lg font-semibold"></dd>
+                        </div>
+                        <div class="flex flex-col pt-3">
+                            <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Favorite</dt>
+                            <dd id="contact_favrioute" class="text-lg font-semibold"></dd>
+                        </div>
+                        <div class="flex flex-col pt-3">
+                            <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Website Link</dt>
+                            <a id="contact_website" class="text-blue-400 hover:underline text-lg font-semibold" target="_blank"></a>
+                        </div>
+                        <div class="flex flex-col pt-3">
+                            <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">LinkedIn Link</dt>
+                            <a id="contact_linkedin" class="text-lg font-semibold" target="_blank"></a>
+                        </div>
+                    </dl>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="flex items-center justify-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-hide="default-modal" onclick="closeContactModal()" type="button"
+                        class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

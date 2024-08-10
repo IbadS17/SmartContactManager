@@ -1,0 +1,23 @@
+{
+  "name": "scm2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "@preline/toggle-password": "^2.1.0",
+    "flowbite": "^2.3.0",
+    "lines-and-columns": "^2.0.4",
+    "preline": "^2.1.0",
+    "sucrase": "^3.35.0"
+  }
+}

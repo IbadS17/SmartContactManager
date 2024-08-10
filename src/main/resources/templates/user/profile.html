@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+  <head>
+    <title data-th-text="${loggedInUser.name}+' |  SCM'">Profile Page</title>
+  </head>
+  <body>
+    <div id="content">
+      <!-- sidebar -->
+
+      <!-- user is logged in : sidebar -->
+
+      <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+      </div>
+
+      <div class="sm:pl-64">
+        <div class="">
+          <div class="flex items-center justify-center dark:bg-slate-900 dark:text-white text-gray-800" style="height: 57rem;">
+              <div class="p-8 rounded-lg shadow-xl w-full max-w-4xl flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+                  <!-- Left Column -->
+                  <div class="flex flex-col items-center md:w-1/3">
+                      <img id="profilePic" th:src="@{${loggedInUser.profilePic}}" alt="Profile Picture" class="w-32 h-32 rounded-full border-2 border-gray-200">
+                      <h2 data-th-text="${loggedInUser.name}" class="text-xl font-semibold mt-4">John Doe</h2>
+                      <p data-th-text="${loggedInUser.email}" class="text-gray-500">johndoe45@gmail.com</p>
+                      <p class="text-gray-500">India</p>
+                  </div>
+                  <!-- Right Column -->
+                  <div class="flex flex-col space-y-4 md:w-2/3">
+                    <div class="grid grid-cols-3 gap-4 items-center">
+                        <div class="col-span-1 text-gray-500">User ID</div>
+                        <div class="col-span-2">: <span data-th-text="${loggedInUser.userId}" class="font-semibold dark:text-gray-200 text-gray-900">User</span></div>
+                    </div>
+                      <div class="grid grid-cols-3 gap-4 items-center">
+                          <div class="col-span-1 text-gray-500">Name</div>
+                          <div class="col-span-2">: <span data-th-text="${loggedInUser.name}" class="font-semibold dark:text-gray-200 text-gray-900">John Doe</span></div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-4 items-center">
+                          <div class="col-span-1 text-gray-500">Email</div>
+                          <div class="col-span-2">: <span data-th-text="${loggedInUser.email}" class="font-semibold dark:text-gray-200 text-gray-900">johndoe45@gmail.com</span></div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-4 items-center">
+                          <div class="col-span-1 text-gray-500">Email Verification</div>
+                          <div class="col-span-2">: <span data-th-text="${loggedInUser.emailVerified ? 'Verified' : 'Pending'}" class="font-semibold text-green-500"></span></div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-4 items-center">
+                          <div class="col-span-1 text-gray-500">Contact</div>
+                          <div class="col-span-2">: <span data-th-text="${loggedInUser.phoneNumber}" class="font-semibold text-gray-900">+987 6789 9876 456</span></div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-4 items-center">
+                          <div class="col-span-1 text-gray-500">Mobile Verification</div>
+                          <div class="col-span-2">: <span data-th-text="${loggedInUser.phoneVerified ? 'Verified':'Pending  '}" class="font-semibold text-green-500">Active</span></div>
+                      </div>
+                      <div class="grid grid-cols-3 gap-4 items-center">
+                          <div class="col-span-1 text-gray-500">Status</div>
+                          <div class="col-span-2">: <span class="font-semibold text-green-500">Active</span></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      console.log("this is profile page");
+    </script>
+  </body>
+</html>

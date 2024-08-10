@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+  <head>
+    <title>Forgot Password</title>
+  </head>
+  <body>
+    <div id="content">
+        <section class="bg-gray-50 dark:bg-gray-900">
+            <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+                    <img class="w-8 h-8 mr-2" data-th-src="@{/img/logo.png}" alt="logo">
+                    SCM    
+                </a>
+                <div class="w-full p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
+                    <div data-th-replace="message :: messageBox"></div>
+                    <!-- <div data-th-replace="message :: messageBox"></div> -->
+                    <p class="font-light text-gray-500 dark:text-gray-400">Don't fret! Just type in your otp and we will send you to reset your password!</p>
+                    <form method=0dd30d1f-6e43-40ed-998f-a2c7f94d8834"post" class="mt-4 space-y-4 lg:mt-5 md:space-y-5" th:action="@{/verify-otp}">
+                        <div>
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your OTP</label>
+                            <input type="text" name="otp" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter OTP here" required="">
+                        </div>
+                        <button type="submit" class="border w-full text-black hover:text-white dark:text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Verify</button>
+                    </form>
+                </div>
+            </div>
+          </section>
+    </div>
+    <script>
+      console.log("Home page");
+    </script>
+  </body>
+</html>
