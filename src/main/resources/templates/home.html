@@ -2,15 +2,157 @@
 <html
   lang="en"
   th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
-  
 >
   <head>
     <title>Home page</title>
+    <!-- Ensure Tailwind CSS is properly linked -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="content">
+    <div id="content" class="">
+      <!-- Hero Section -->
+      <header
+        class="bg-blue-600 text-white dark:bg-gray-800 dark:text-gray-200"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8">
+          <h1 class="text-4xl font-bold">Manage Your Contacts Effortlessly</h1>
+          <p class="mt-4 text-lg">
+            Store and access all your phone contacts in the cloud securely and
+            easily.
+          </p>
+          <div class="mt-8 flex justify-center">
+            <a
+              data-th-href="@{/signup}"
+              class="bg-white text-blue-600 px-8 py-3 rounded-md shadow hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <!-- Features Section -->
+      <section class="py-12 bg-gray-100 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-200">
+              Features
+            </h2>
+            <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">
+              Everything you need to manage your contacts in one place.
+            </p>
+          </div>
+          <div
+            class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                Secure Cloud Storage
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Your contacts are stored safely in the cloud, with strong
+                encryption to protect your data.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                Access Anywhere
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Access your contacts from any device, anywhere, anytime.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                Easy Management
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Organize, search, and manage your contacts with our
+                user-friendly interface.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="bg-blue-600 py-12 text-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold">Ready to Get Started?</h2>
+          <p class="mt-4 text-lg">
+            Sign up today and manage your contacts like never before.
+          </p>
+          <div class="mt-8 flex justify-center space-x-4">
+            <a
+              data-th-href="@{/signup}"
+              class="bg-white text-blue-600 px-8 py-3 rounded-md shadow hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
+              >Sign Up</a
+            >
+            <a
+              href="#"
+              class="bg-white text-blue-600 px-8 py-3 rounded-md shadow hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </section>
     </div>
-    <h1 class="">Welcome to Home page</h1>
     <script>
       console.log("Home page");
     </script>

@@ -1,17 +1,231 @@
 <!DOCTYPE html>
 <html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{})}">
   <head>
-  
-    <title>
-      Services
-    </title>
+    <title>Services</title>
   </head>
-  <body>
-    <section id="content">
-      <h1>Welcome to services page</h1>
-      <h2>Services offered by SCM</h2>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolore assumenda rerum harum mollitia incidunt nesciunt dignissimos esse dicta reprehenderit quam, quisquam aspernatur enim consequatur accusamus, minima alias odit ducimus.<10></10>
-    </section>
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200">
+    <div id="content" class="">
+      <!-- Hero Section -->
+      <header
+        class="bg-blue-600 text-white dark:bg-gray-800 dark:text-gray-200"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8">
+          <h1 class="text-4xl font-bold">Our Services</h1>
+          <p class="mt-4 text-lg">
+            Discover the wide range of services we offer to manage your contacts
+            effectively.
+          </p>
+        </div>
+      </header>
 
+      <!-- Services Section -->
+      <section class="py-12 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-200">
+              What We Offer
+            </h2>
+            <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">
+              Tailored solutions to meet your contact management needs.
+            </p>
+          </div>
+          <div
+            class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                Cloud Contact Storage
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Securely store all your contacts in the cloud with 24/7 access
+                from anywhere.
+              </p>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                Cross-Platform Sync
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Keep your contacts in sync across all your devices, no matter
+                where you are.
+              </p>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                Advanced Search
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Find any contact instantly with our powerful search and
+                filtering tools.
+              </p>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                Backup and Restore
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Never lose a contact again with our automatic backup and restore
+                options.
+              </p>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                Contact Sharing
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Easily share contacts with colleagues, friends, and family with
+                a click of a button.
+              </p>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+                Custom Contact Groups
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Organize your contacts into custom groups for better management
+                and quick access.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="bg-blue-600 dark:bg-gray-800 py-12 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold">
+            Ready to Elevate Your Contact Management?
+          </h2>
+          <p class="mt-4 text-lg">
+            Get in touch with us today to learn more about our services and how
+            we can help you.
+          </p>
+          <div class="mt-8 flex justify-center space-x-4">
+            <a
+              href="#"
+              class="bg-white text-blue-600 dark:text-gray-800 px-8 py-3 rounded-md shadow hover:bg-gray-100"
+              >Contact Us</a
+            >
+            <a
+              href="#"
+              class="bg-white text-blue-600 dark:text-gray-800 px-8 py-3 rounded-md shadow hover:bg-gray-100"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      console.log("Services page");
+    </script>
+    <!-- <script th:src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
   </body>
 </html>

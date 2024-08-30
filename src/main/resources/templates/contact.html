@@ -6,16 +6,176 @@
   <head>
     <title>Contact Us Page</title>
   </head>
-  <body>
-    <div id="content">
-      <h1>Welcome to Contact page</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
-        ratione!
-      </p>
-    </div>
-    <script>
-      console.log("Home page");
-    </script>
-  </body>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Contact Us</title>
+      <!-- Ensure Tailwind CSS is properly linked -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+        rel="stylesheet"
+      />
+    </head>
+    <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200">
+      <div id="content" class="">
+        <!-- Hero Section -->
+        <header
+          class="bg-blue-600 text-white dark:bg-gray-800 dark:text-gray-200"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8">
+            <h1 class="text-4xl font-bold">Get in Touch with Us</h1>
+            <p class="mt-4 text-lg">
+              We are here to help you with any inquiries, support, or feedback.
+              Reach out to us anytime!
+            </p>
+          </div>
+        </header>
+
+        <!-- Contact Form Section -->
+        <section class="py-12 bg-gray-100 dark:bg-gray-800">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-200">
+                Contact Us
+              </h2>
+              <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">
+                Fill out the form below, and our team will get back to you as
+                soon as possible.
+              </p>
+            </div>
+            <div class="mt-10">
+              <form class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 dark:text-gray-200"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 dark:text-gray-200"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 dark:text-gray-200"
+                    placeholder="Subject"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 dark:text-gray-200"
+                    placeholder="Your message"
+                  ></textarea>
+                </div>
+                <div class="text-center">
+                  <button
+                    type="submit"
+                    class="w-full sm:w-auto bg-blue-600 text-white px-8 py-3 rounded-md shadow hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section class="py-12 bg-white dark:bg-gray-900">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-200">
+                Our Contact Information
+              </h2>
+              <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">
+                You can also reach us through the following channels:
+              </p>
+            </div>
+            <div
+              class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              <div
+                class="flex items-center justify-center p-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md"
+              >
+                <div class="text-center">
+                  <h3
+                    class="text-lg font-medium text-gray-800 dark:text-gray-200"
+                  >
+                    Email
+                  </h3>
+                  <p class="mt-2 text-gray-600 dark:text-gray-400">
+                    support@scm.com
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-center p-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md"
+              >
+                <div class="text-center">
+                  <h3
+                    class="text-lg font-medium text-gray-800 dark:text-gray-200"
+                  >
+                    Phone
+                  </h3>
+                  <p class="mt-2 text-gray-600 dark:text-gray-400">
+                    +91 771 896 8240
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-center p-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md"
+              >
+                <div class="text-center">
+                  <h3
+                    class="text-lg font-medium text-gray-800 dark:text-gray-200"
+                  >
+                    Address
+                  </h3>
+                  <p class="mt-2 text-gray-600 dark:text-gray-400">
+                    Mubarak Complex, Achanak Nagar, Mumbai - 70
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script>
+        console.log("Contact Us page");
+      </script>
+      <!-- <script th:src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    </body>
+  </html>
 </html>
