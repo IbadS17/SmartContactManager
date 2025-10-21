@@ -33,8 +33,8 @@ It allows users to securely sign up, log in, and manage their personal contacts 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/smart-contact-manager.git
-cd smart-contact-manager
+git clone https://github.com/IbadS17/SmartContactManager.git
+cd SmartContactManager
 ````
 
 ### 2. Configure Database
