@@ -51,7 +51,8 @@ public class UserServiceImpl implements UserService {
         user.setEmailToken(emailToken);
         User savedUser = userRepo.save(user);
         String emailLink = Helper.getLinkForEmailVerification(emailToken);
-        emailServices.sendEmail(savedUser.getEmail(), "Verify Your Email: Smart Contact Manager", emailLink);
+        String emailHtml = Helper.getEmailVerificationTemplate(emailLink, savedUser.getName());
+        emailServices.sendEmailWithHtml(savedUser.getEmail(), "Verify Your Email: Smart Contact Manager", emailHtml);
         return savedUser;
 
     }

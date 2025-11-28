@@ -110,6 +110,24 @@ public class PageController {
         // UserForm
         System.out.println(userForm);
 
+        if (rBindingResult.hasErrors()) {
+            Message errorMessage = Message.builder()
+                    .content("Please correct the highlighted errors and try again.")
+                    .type(MessageType.red)
+                    .build();
+            session.setAttribute("message", errorMessage);
+            return "signup";
+        }
+
+        if (userService.isUserExistByEmail(userForm.getEmail())) {
+            Message duplicateMessage = Message.builder()
+                    .content("An account with this email already exists. Please login instead.")
+                    .type(MessageType.red)
+                    .build();
+            session.setAttribute("message", duplicateMessage);
+            return "redirect:/login";
+        }
+
         
 
         // save to database
