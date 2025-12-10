@@ -1,5 +1,6 @@
 console.log("Contact");
-const baseUrl = "http://localhost:8080";
+// const baseUrl = "http://localhost:8080";
+const baseUrl = `https://smartcontactmanager-emlp.onrender.com`
 const viewContactModal = document.getElementById("view_contact_modal");
 
 // options with default values
